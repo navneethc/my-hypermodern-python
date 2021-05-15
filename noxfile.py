@@ -1,5 +1,6 @@
 import nox
 
+
 @nox.session(python=['3.8', '3.7'])
 def tests(session):
     args = session.posargs or ["--cov", '-m', 'not e2e']
@@ -8,6 +9,7 @@ def tests(session):
 
 
 locations = 'src', 'tests', 'noxfile.py'
+
 
 @nox.session(python=['3.8', '3.7'])
 def lint(session):
