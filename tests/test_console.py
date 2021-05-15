@@ -37,7 +37,7 @@ def test_main_uses_en_wikipedia_org(runner, mock_requests_get):
 
 
 def test_main_fails_on_request_error(runner, mock_requests_get):
-    mock_requests_get.side_effect = Exception('boom!')
+    mock_requests_get.side_effect = Exception("boom!")
     result = runner.invoke(console.main)
     assert result.exit_code == 1
 
@@ -49,8 +49,8 @@ def test_main_prints_message_on_request_error(runner, mock_requests_get):
 
 
 def test_main_uses_specified_language(runner, mock_wikipedia_random_page):
-    runner.invoke(console.main, ['--language=pl'])
-    mock_wikipedia_random_page.assert_called_with(language='pl')
+    runner.invoke(console.main, ["--language=pl"])
+    mock_wikipedia_random_page.assert_called_with(language="pl")
 
 
 @pytest.mark.e2e
