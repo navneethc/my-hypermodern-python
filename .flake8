@@ -1,5 +1,5 @@
 [flake8]
-select = B,B9BLK,C,F,E,I,S,W
+select = B,B9,BLK,C,F,E,I,S,W
 ignore = E203,E501,W503
 application-import-names = my_hypermodern_python,tests
 import-order-style = google
